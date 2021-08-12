@@ -7,7 +7,7 @@ import Spacer from './UI/Spacer';
 import { StatusBar } from 'expo-status-bar';
 import commonColor from '../../constants/colors';
 import TextI18n from './UI/TextI18n';
-import { SafeAreaView, StyleSheet, TextInput, Button } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Button, Text } from "react-native";
 import DatePicker from 'react-native-date-picker'
 
 
@@ -43,13 +43,17 @@ const CreateComponent = ({ loading, events, reFetch }) => {
                 <Spacer size={20} />
 
                 <SafeAreaView>
+                    <Text style={styles.labels}>EVENT TITLE</Text>
                     <TextInput
+                        placeholderTextColor={"#707070"}
                         style={styles.input}
                         onChangeText={setEventTitle}
                         value={eventTitle}
                         placeholder="Title"
                     />
+                    <Text style={styles.labels}>EVENT DESCRIPTION</Text>
                     <TextInput
+                        placeholderTextColor={"#707070"}
                         style={styles.input}
                         multiline // Inherit any props passed to it; e.g., multiline, numberOfLines below
                         editable
@@ -58,23 +62,29 @@ const CreateComponent = ({ loading, events, reFetch }) => {
                         onChangeText={setEventDescription}
                         value={eventDescription}
                     />
+                    <Text style={styles.labels}>EVENT LOCATION</Text>
                     <TextInput
+                        placeholderTextColor={"#707070"}
                         style={styles.textarea}
                         onChangeText={setEventLocation}
                         value={eventLocation}
                         placeholder="Description"
                     />
+                    <Text style={styles.labels}>EVENT TIME</Text>
                     {/*
-                <DatePicker
-                    date={eventDate}
-                    onDateChange={setEventDate}
-                />*/}
-                    <Button
-                        onPress={createEvent}
-                        title="Create"
-                        color="#841584"
-                        accessibilityLabel="Learn more about this purple button"
-                    />
+                    <DatePicker
+                        date={eventDate}
+                        onDateChange={setEventDate}
+                    />*/}
+                    <View style={styles.buttonContainer}>
+                        <Button
+                            style={styles.button}
+                            onPress={createEvent}
+                            color="#dbc7f2"
+                            title="Create"
+                            accessibilityLabel="Learn more about this purple button"
+                        />
+                    </View>
                 </SafeAreaView>
 
 
@@ -84,21 +94,40 @@ const CreateComponent = ({ loading, events, reFetch }) => {
     );
 };
 const styles = StyleSheet.create({
-    input: {
+    labels: {
+        fontSize: 18,
         color: 'white',
-        borderColor: 'purple',
+        marginLeft: 12,
+        padding: 0,
+    },
+    input: {
+        borderRadius: 6,
+        color: 'white',
+        borderColor: '#dbc7f2',
         height: 40,
         margin: 12,
         borderWidth: 1,
         padding: 10,
     },
     textarea: {
+        borderRadius: 6,
         color: 'white',
-        borderColor: 'purple',
+        borderColor: '#dbc7f2',
         height: 40,
         margin: 12,
         borderWidth: 1,
         padding: 10,
+    },
+    buttonContainer: {
+        margin: 12,
+        borderRadius: 6,
+        backgroundColor: '#dbc7f2',
+        color: 'black'
+    },
+    button: {
+
+        backgroundColor: '#dbc7f2',
+        color: 'black'
     }
 });
 
