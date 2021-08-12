@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ImageBackground, TouchableOpacity } from 'react-native';
+import { Text } from 'native-base';
 import { Icon, View } from 'native-base';
 import TextI18n from './TextI18n';
 
-const CardH2t = ({ source, text1, text2, onPress, loading }) => (
+const CardH2t = ({ background, title, date, location, onPress, loading }) => (
+
     <TouchableOpacity style={{
         flex: 1,
-        height: 220,
+        height: 500,
         padding: 10,
-    }} onPress={onPress} disabled={loading}>
+    }} onPress={onPress} disabled={loading} >
         <View style={{
             shadowColor: '#000',
             shadowOffset: {
@@ -22,7 +24,7 @@ const CardH2t = ({ source, text1, text2, onPress, loading }) => (
             borderRadius: 10,
         }}>
             <ImageBackground
-                source={source}
+                source={{ uri: background }}
                 imageStyle={{ resizeMode: 'cover', borderRadius: 15 }}
                 style={{
                     width: '100%',
@@ -31,24 +33,20 @@ const CardH2t = ({ source, text1, text2, onPress, loading }) => (
                 }}>
                 <View style={{
                     flex: 1, padding: 15,
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
+                    alignItems: 'flex-end',
+                    justifyContent: 'flex-end',
                 }}>
-                    <TextI18n style={{ fontSize: 23, textAlign: 'center', fontFamily: 'Montserrat_Bold' }}>
-                        {text1}
-                    </TextI18n>
-                    <TextI18n style={{ fontSize: 17, textAlign: 'center' }}>{text2}</TextI18n>
+                    <Text style={{ color: 'white', fontSize: 17, textAlign: 'right' }}>{date} | {location}</Text>
+                    <Text style={{ color: 'white', fontSize: 28, textAlign: 'right', fontFamily: 'Montserrat_Bold' }}>
+                        {title}
+                    </Text>
 
-                    <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start' }}>
-                        <TextI18n style={{ fontSize: 20, textAlign: 'center', fontFamily: 'Montserrat_Bold' }}>
-                            global.go
-                        </TextI18n>
-                        <Icon type="Entypo" name="chevron-right" style={{ color: 'white', fontSize: 26 }}/>
-                    </View>
+
+
                 </View>
             </ImageBackground>
         </View>
-    </TouchableOpacity>
+    </TouchableOpacity >
 );
 
 CardH2t.propTypes = {

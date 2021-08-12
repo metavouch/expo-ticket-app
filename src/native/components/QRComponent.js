@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { FlatList, TouchableOpacity, RefreshControl, Image, View, Dimensions } from 'react-native';
 import { Container, Content, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import Spacer from '../UI/Spacer';
-import TextH2t from '../UI/TextH2t';
+import Spacer from './UI/Spacer';
+import TextH2t from './UI/TextH2t';
 import { StatusBar } from 'expo-status-bar';
-import commonColor from '../../../constants/colors';
-import TextI18n from '../UI/TextI18n';
-import i18n from '../../../translations/i18n';
+import commonColor from '../../constants/colors';
+import TextI18n from './UI/TextI18n';
+import i18n from '../../translations/i18n';
 
 const deviceWidth = Dimensions.get('window').width;
 
@@ -18,10 +18,6 @@ const EventsListing = ({ loading, events, reFetch }) => {
 
     return (
         <Container style={{ backgroundColor: commonColor.backgroundColor }}>
-            <StatusBar style="light"/>
-            <TextI18n style={{ color: '#ffffff', fontSize: 30, margin: 50, marginBottom: 10, marginLeft: 10 }}>
-                events.title
-            </TextI18n>
             <Content padder refreshControl={(
                 <RefreshControl
                     refreshing={loading}
@@ -32,6 +28,11 @@ const EventsListing = ({ loading, events, reFetch }) => {
                     colors={['#000', '#fff', '#000']}
                 />
             )}>
+                <StatusBar style="light" />
+                <TextI18n style={{ color: '#ffffff', fontSize: 30, margin: 50, marginBottom: 10, marginLeft: 10 }}>
+                    qr.title
+                </TextI18n>
+
                 <FlatList
                     data={events}
                     renderItem={({ item, index }) => (
@@ -107,7 +108,7 @@ const EventsListing = ({ loading, events, reFetch }) => {
                                         </View>
                                         <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
                                             <Icon type="FontAwesome" name="ticket"
-                                                  style={{ fontSize: 17, color: '#b3b5bb', paddingRight: 5 }}/>
+                                                style={{ fontSize: 17, color: '#b3b5bb', paddingRight: 5 }} />
                                             <TextH2t style={{
                                                 color: '#b3b5bb',
                                                 fontSize: 13,
@@ -120,7 +121,7 @@ const EventsListing = ({ loading, events, reFetch }) => {
                     )}
                     keyExtractor={(item, index) => (`list-item-${index}`)}
                 />
-                <Spacer size={20}/>
+                <Spacer size={20} />
             </Content>
         </Container>
     );

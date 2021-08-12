@@ -35,7 +35,7 @@ export default class App extends React.Component {
         loading: true,
     };
 
-    componentDidMount () {
+    componentDidMount() {
         i18n.locale = this.props.store.getState().member.locale === 'fr' ? 'fr' : 'en';
         SplashScreen.preventAutoHideAsync();
         this.loadAssets();
@@ -57,35 +57,28 @@ export default class App extends React.Component {
             })
             .then(() => SplashScreen.hideAsync())
             .then(() => this.setState({ loading: false }))
-        ;
+            ;
     };
 
-    render () {
+    render() {
         const { store, persistor } = this.props;
         LogBox.ignoreAllLogs(true);
 
         return (
-            <AnimatedSplash
-                translucent={true}
-                isLoaded={!this.state.loading}
-                logoImage={require('../images/ic_launcher_h2t.png')}
-                backgroundColor={theme.backgroundColor}
-                logoHeight={185}
-                logoWidth={185}
-            >
-                <Root>
-                    <Provider store={store}>
-                        <PersistGate
-                            loading={<H2TLoading/>}
-                            persistor={persistor}
-                        >
-                            <Router>
-                                {Routes}
-                            </Router>
-                        </PersistGate>
-                    </Provider>
-                </Root>
-            </AnimatedSplash>
+
+            <Root>
+                <Provider store={store}>
+                    <PersistGate
+                        loading={<H2TLoading />}
+                        persistor={persistor}
+                    >
+                        <Router>
+                            {Routes}
+                        </Router>
+                    </PersistGate>
+                </Provider>
+            </Root>
+
         );
     }
 }

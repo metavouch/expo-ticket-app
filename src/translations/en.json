@@ -1,26 +1,16 @@
 {
-    "homepage": {
-        "title": "Home",
-        "card1Text1": "Have you chosen your next event?",
-        "card1Text2": "Choose your next party among a selection of musical events around Montréal",
-        "card2Text1": "Did you take your ticket?",
-        "card2Text2": "Come and check your tickets in the app",
-        "cardSignInText1": "Already have an account?",
-        "cardSignInText2": "Log in by clicking here to have access to all the features of the app"
+    "explore": {
+        "title": "Explore"
     },
-    "events": {
-        "title": "Events",
-        "full": "full",
-        "available": "tick. avail.",
-        "buyTicket": "Buy ticket",
-        "buyDone": "Ticket is on app",
-        "pay": "Pay"
+    "createEvent": {
+        "title": "Create Event"
     },
-    "tickets": {
-        "title": "Tickets",
-        "scanned": "SCANNED",
-        "noTickets": "No tickets found",
-        "noTicketsInfo": "You have no events planned for the next few days yet \uD83D\uDE25"
+    "exchange": {
+        "title": "Exchange",
+        "noTickets": "You have no tickets"
+    },
+    "qr": {
+        "title": "Ticket Validator"
     },
     "profile": {
         "connectWith": "You are connected with email",

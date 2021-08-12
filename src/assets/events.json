@@ -1,0 +1,47 @@
+[
+  {
+    "title": "My Event",
+    "location": "Los Angeles",
+    "date": "May 22, 2022",
+    "slug": "my-event",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background":
+      "https://carbon-media.accelerator.net/0000000kYBW/76PK5zmw5ZJgd4DzqqM0sI;2160x2160/quality(80).jpeg"
+  },
+  {
+    "title": "Malaa",
+    "location": "Sardine Can",
+    "date": "December 22, 2022",
+    "slug": "malaa",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background":
+      "https://i.scdn.co/image/ab6761610000e5ebbcc0f9459c1b1f64f1fffcae"
+  },
+  {
+    "title": "My Event",
+    "location": "Los Angeles",
+    "date": "May 22, 2022",
+    "slug": "my-event-2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background":
+      "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg"
+  },
+  {
+    "title": "My Event",
+    "location": "Los Angeles",
+    "date": "May 22, 2022",
+    "slug": "my-event-3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background":
+      "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg"
+  },
+  {
+    "title": "My Event",
+    "location": "Los Angeles",
+    "date": "May 22, 2022",
+    "slug": "my-event-4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "background":
+      "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg"
+  }
+]

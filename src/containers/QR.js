@@ -5,12 +5,12 @@ import * as Analytics from 'expo-firebase-analytics';
 
 import registerForPushNotificationsAsync from '../lib/GetExpoPushToken';
 
-class Home extends Component {
+class QR extends Component {
     static propTypes = {
         Layout: PropTypes.func.isRequired,
     };
 
-    componentDidMount () {
+    componentDidMount() {
         const { sendPToken } = this.props;
 
         registerForPushNotificationsAsync().then(token => {
@@ -49,4 +49,4 @@ const mapDispatchToProps = dispatch => ({
     sendPToken: dispatch.member.sendPushToken,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(QR);
